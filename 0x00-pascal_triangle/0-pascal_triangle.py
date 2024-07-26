@@ -9,12 +9,12 @@ def pascal_triangle(n):
     of integers representing the Pascal’s triangle of n
     """
     res = []
-    if nz > 0:
-        for iz in range(1, nz + 1):
+    if n > 0:
+        for i in range(1, n + 1):
             level = []
-            Cz = 1
-            for jz in range(1, iz + 1):
-                level.append(Cz)
-                Cz = Cz * (iz - jz) // jz
+            C = 1
+            for j in range(1, i + 1):
+                level.append(C)
+                C = C * (i - j) // j
             res.append(level)
     return res
