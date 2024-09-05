@@ -14,13 +14,13 @@ def isWinner(x, nums):
     ben = 0
     maria = 0
 
-    a = [1 for x in range(sorted(nums)[-1] + 1)]
-    a[0], a[1] = 0, 0
-    for iz in range(2, len(a)):
-        rm_multiples(a, iz)
+    az = [1 for x in range(sorted(nums)[-1] + 1)]
+    az[0], az[1] = 0, 0
+    for iz in range(2, len(az)):
+        rm_multiples(az, iz)
 
     for iz in nums:
-        if sum(a[0:iz + 1]) % 2 == 0:
+        if sum(az[0:iz + 1]) % 2 == 0:
             ben += 1
         else:
             maria += 1
